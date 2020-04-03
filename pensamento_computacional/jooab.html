@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá JS</title>
+</head>
+    <body>
+        <h1 style="color: blue;">Olá galera!</h1>
+
+        <h2>Meus primeiros passos em JS</h2>
+
+        <input id="altura" type="number" placeholder="Altura(m)" />
+        <input id="peso" type="number" placeholder="Peso(kg)" />
+        <input id="btn_calcular_imc" type="button" value="Calcular IMC"/>
+        <input id="reset" type="button" value="Limpar" disabled />
+
+        <p>Seu IMC é: <strong id="imc"></strong></p>
+
+        <script>
+            campo_altura = document.getElementById('altura')
+            campo_peso = document.getElementById('peso')
+            resultado = document.getElementById('imc')
+            btn_calcular_imc = document.getElementById('btn_calcular_imc')
+            btn_reset = document.getElementById('reset')
+            
+            btn_calcular_imc.onclick = function(){
+                altura = campo_altura.value
+                peso = campo_peso.value
+                imc = peso / (altura*altura)
+                resultado.textContent = imc
+
+                btn_calcular_imc.disabled = true
+                btn_reset.disabled = false
+
+            }
+
+            function limpar(){
+                btn_calcular_imc.disabled = false
+                btn_reset.disabled = true
+                campo_peso.value = ''
+                campo_altura.value = ''
+                resultado.textContent = ''
+                campo_altura.focus()
+            }
+            
+            btn_reset.onclick = limpar
+            //btn_reset.addEventListener('click', limpar)
+
+        </script>
+    </body>
+</html>
+
