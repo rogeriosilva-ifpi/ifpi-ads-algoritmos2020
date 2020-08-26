@@ -1,5 +1,5 @@
 def main():
-    n = int(input('N: '))
+    n = int(input('😸 N:'))
     num = 1
     somatorio = 0
 
