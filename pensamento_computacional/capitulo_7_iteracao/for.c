@@ -23,5 +23,5 @@ for (aluno in alunos)
 for aluno in alunos:
     print(aluno)
 
-for numero in range(inicio, alvo+1, 1):
+for numero in range(alvo):
     print(numero)
