@@ -2,8 +2,9 @@ def main():
     nome = 'Rogério da Silva'
     novo_nome = ''
 
-    for i in range(len(nome)-1, -1, -1):
-        novo_nome += nome[i]
+    for caractere in nome:
+        if
+        contador += 1
 
     print(nome)
     print(novo_nome)
