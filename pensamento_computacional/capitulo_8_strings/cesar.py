@@ -1,6 +1,6 @@
 def main():
     mensagem = input('Mensagem: ')
-    chave = int(input('Chave: '))
+    chave = obter_numero_positivo('Chave: ')
 
     mensagem_criptografada = cripto_cesar(mensagem, chave)
 
@@ -22,10 +22,8 @@ def cripto_cesar(texto, key):
 def rotacionar_caractere(c, k):
     codigo = ord(c)
     novo_codigo = codigo + k
-    if eh_letra_maiuscula(c) and novo_codigo > 90:
-        novo_codigo -= 26
-
-    if eh_letra_minuscula(c) and novo_codigo > 122:
+    if (eh_letra_maiuscula(c) and novo_codigo > 90)\
+            or (eh_letra_minuscula(c) and novo_codigo > 122):
         novo_codigo -= 26
 
     novo_caractere = chr(novo_codigo)
@@ -41,7 +39,16 @@ def eh_letra_minuscula(c):
 
 
 def eh_letra(c):
-    return eh_letra_maiuscula(c) or eh_letra_minuscula(c):
+    return eh_letra_maiuscula(c) or eh_letra_minuscula(c)
+
+
+def obter_numero_positivo(msg):
+    num = int(input(msg))
+
+    while num < 1:
+        num = int(input('Valor incorreto! ' + msg))
+
+    return num
 
 
 main()
