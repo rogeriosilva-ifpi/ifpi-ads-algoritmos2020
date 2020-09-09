@@ -6,10 +6,10 @@ def contem(frase, palavra):
     tam_frase = len(frase)
     tam_palavra = len(palavra)
     for pos in range((tam_frase-tam_palavra)+1):
-        # print(f'Fatia começando em "{frase[pos]}"')
-        fatia = substring(frase, pos, tam_palavra)
-        if fatia == palavra:
-            return True
+        if frase[pos] == palavra[0]:
+            fatia = substring(frase, pos, tam_palavra)
+            if fatia == palavra:
+                return True
 
     return False
 
@@ -30,6 +30,9 @@ def substring(frase, pos, tamanho):
 
 def reverse(texto):
     retorno = ''
+    # range(inicio, fim, passo)
+    # 0 ... 10 range([0], 11, [1]), range(11)
+    # 5 ... 1 range(5, 0, -1)
     for i in range(len(texto)-1, -1, -1):
         retorno += texto[i]
 
