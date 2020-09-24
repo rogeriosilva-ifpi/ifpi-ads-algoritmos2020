@@ -39,7 +39,11 @@ def eh_letra_minuscula(c):
 
 
 def eh_letra(c):
-    return eh_letra_maiuscula(c) or eh_letra_minuscula(c)
+    # return eh_letra_maiuscula(c) or eh_letra_minuscula(c)
+    if eh_letra_maiuscula(c) or eh_letra_minuscula(c):
+        return True
+    else:
+        return False
 
 
 def obter_numero_positivo(msg):
