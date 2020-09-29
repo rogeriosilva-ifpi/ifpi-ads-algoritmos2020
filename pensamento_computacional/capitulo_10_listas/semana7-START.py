@@ -18,8 +18,9 @@ def main():
         # Verificar operacao a fazer de acordo com a opcao
         if opcao == 1:
             # Listas quando passadas como argumentos e modificadas por
-            # funções não é necessário retorná-las, por a variável apontará
-            # sempre para a mesma lista.
+            # funções não é necessário retorná-las
+            # Se modificar a lista dentro de um função, as variáveis que já
+            # apontavam para ela, terão acesso a lista moficiada normalmente
             # Por isso nao está ```lista = inserir_valores(lista)````
             inserir_valores(lista)
         elif opcao == 2:
