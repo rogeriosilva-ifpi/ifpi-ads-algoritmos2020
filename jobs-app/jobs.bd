@@ -1,0 +1,1 @@
+[{"descricao": "Python Dev", "remoto": "Sim", "ingles": "Sim", "salario": 3500.0, "tech": "Python + Django", "contratacao": "PJ"}, {"descricao": "Dev NodeJS", "remoto": "N\u00e3o", "ingles": "Sim", "salario": 5000.0, "tech": "NodeJS, ExpressJS", "contratacao": "PJ"}]
